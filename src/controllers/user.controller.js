@@ -354,12 +354,12 @@ const updateCoverImage = asyncHandler(async(req , res) =>{
  // upload on cloudinary 
 
 if(!coverImageLocalPath){
-  return ApiError(400 , "coverImage file is missing")
+  throw new  ApiError(400 , "coverImage file is missing")
 }
  const coverImage = uploadOnCloudinary(coverImageLocalPath)
 
  if(!coverImage.url){
-  return new ApiError(401 , "coverImage url is missing")
+  throw new ApiError(401 , "coverImage url is missing")
  }
 
 //  now update to new
