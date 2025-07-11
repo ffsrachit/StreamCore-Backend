@@ -40,6 +40,7 @@ const registerUser = asyncHandler(async(req , res) =>{
 
    // getting details
     const {fullName , email , username , password} = req.body
+   
 
 
    // console.log(req.body)
