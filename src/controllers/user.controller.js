@@ -2,7 +2,7 @@ import { asyncHandler } from "../utils/asyncHandler.js"; // wrapper isse hrr chi
 import {ApiError} from "../utils/APiError.js"
 import {User} from "../models/user.model.js"
 import {uploadOnCloudinary}  from "../utils/cloudinary.js"
-import { ApiResponse } from "../utils/ApiRespnse.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
 import jwt from "jsonwebtoken"
 import mongoose from "mongoose";
 
