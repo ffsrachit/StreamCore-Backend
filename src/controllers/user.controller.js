@@ -296,7 +296,7 @@ if(!(username || fullName || email)){
   throw new ApiError(400 , " All field are required")
 }
 
- const user = User.findByIdAndUpdate(
+ const user = await User.findByIdAndUpdate(
   req.user?._id ,
   {
     $set : {
@@ -314,7 +314,7 @@ return res
 
 const updateUserAvatar = asyncHandler(async(req , res) =>{
   // ye nya avtar upload kra hai
-const avatarLocalPath =req.file?.path
+const avatarLocalPath = req.file?.path
 
 if(!avatarLocalPath){
   throw new ApiError(400 , "Avatar file is missing")
@@ -331,7 +331,7 @@ if(!avatar.url){
 // NOw Update 
 
 
-const user = User.findByIdAndUpdate(
+const user = await User.findByIdAndUpdate(
   req.user?._id , 
   {
     $set : {
@@ -365,7 +365,7 @@ if(!coverImageLocalPath){
 //  now update to new
 
 
-  const user = User.findByIdAndUpdate(
+  const user = await User.findByIdAndUpdate(
     req.user?._id  , 
     {
       $set : {coverImage  : coverImage.url}
@@ -377,6 +377,8 @@ if(!coverImageLocalPath){
   .status(200)
   .json(new ApiResponse(200 , user , "coverImage Updated Successfully" ))
 }) 
+
+
 
 export {registerUser ,
    loginUser ,
