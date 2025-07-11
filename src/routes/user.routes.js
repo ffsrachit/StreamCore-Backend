@@ -41,7 +41,7 @@ router.route("/change-password").post(verifyJWT , changeCurrentPaaword)
 router.route("/current-user").get(verifyJWT , getCurrentUser)
 router.route("/update-account").patch(updateAccountCredentials)
 router.route("/avatar").patch(verifyJWT , upload.single ("avatar") , updateUserAvatar)
-router.route("/coverImage").patch(verifyJWT , upload.single("/coverImage") , updateCoverImage)
+router.route("/coverImage").patch(verifyJWT , upload.single("coverImage") , updateCoverImage)
 router.route("/c/:username").get(verifyJWT , getUserChannelProfile)
 router.route("/history").get(verifyJWT , getWatchHistory)
 
