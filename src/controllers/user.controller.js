@@ -287,7 +287,7 @@ const getCurrentUser = asyncHandler(async(req , res) =>{
   // fetching current user 
   
    return res.status(200)
-   .json(200 , req.user, "current user fetch successfully")
+   .json(200 , req.user._id, "current user fetch successfully")
 })
 
 const updateAccountCredentials = asyncHandler(async(req , res) =>{
