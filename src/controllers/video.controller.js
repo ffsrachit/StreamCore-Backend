@@ -89,5 +89,4 @@ const getVideoById = asyncHandler(async (req, res) => {
 export {
 getAllVideos ,
 getVideoById , 
-gglePublishStatus
 }
