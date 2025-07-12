@@ -383,7 +383,7 @@ if(!coverImageLocalPath){
 const getUserChannelProfile = asyncHandler(async(req , res) =>{
  const {username} =  req.params
 
- if(!username?.trime()){
+ if(!username?.trim()){
   throw new ApiError(400 , "usernmae is missing")
  }
 

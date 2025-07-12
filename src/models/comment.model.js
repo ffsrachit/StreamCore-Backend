@@ -18,4 +18,4 @@ owner :{
 },{timestamps:true})
 
 commentSchema.plugin(mongooseAggregatePaginate)
-export const Comment = mongoose.moodel("Comment" , commentSchema)
+export const Comment = mongoose.model("Comment" , commentSchema)

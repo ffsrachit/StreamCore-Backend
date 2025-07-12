@@ -135,6 +135,9 @@ const UpdateTweet = asyncHandler(async(req , res)=>{
       throw new ApiError(403 , "Unauthorized Request")
     }
    const {content}  = req.body
+   if(!content){
+    throw new ApiError("Enter Updated Content")
+   }
    const updatedTweet =  await Tweet.findByIdAndUpdate(tweetId , {
         $set :{
           content : content?.toLowerCase()
