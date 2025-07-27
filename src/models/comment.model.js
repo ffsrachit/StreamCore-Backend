@@ -12,8 +12,8 @@ video :{
     ref : "Video"
 },
 owner :{
-    type : mongoose.Schema.Types.ObjectId,
-    ref : "User" 
+   type : mongoose.Schema.Types.ObjectId,
+    ref : "User"  
 }
 },{timestamps:true})
 
